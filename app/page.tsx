@@ -12,6 +12,7 @@ import { PortfolioSkeleton } from "@/components/portfolio-skeleton"
 import { useLoading } from "@/hooks/use-loading"
 import { motion, AnimatePresence } from "framer-motion"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 export default function Portfolio() {
   const isLoading = useLoading(1500) // 1.5 second loading simulation
 
@@ -37,6 +38,7 @@ export default function Portfolio() {
         >
           <Header />
           <main>
+          <Analytics />
           <SpeedInsights />
             <Hero />
             <About />
